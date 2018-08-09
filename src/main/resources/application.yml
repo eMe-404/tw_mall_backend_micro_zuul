@@ -1,0 +1,16 @@
+zuul:
+  routes:
+    product:
+      url: http://localhost:8083/products
+      path: /products/**
+    order:
+      url: http://localhost:8082/orders
+      path: /orders/**
+    user:
+      url: http://localhost:8081/users
+      path: /users/**
+management:
+  endpoints:
+    web:
+      exposure:
+        include: routes,filters
